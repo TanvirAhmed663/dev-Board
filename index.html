@@ -8,41 +8,44 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#f1f5ff] min-h-screen p-4">
-  <!-- Header -->
-  <div class="bg-white rounded-xl p-4 flex justify-between items-center shadow-md">
-    <div class="flex items-center gap-2">
-      <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-lg"><img src="assets/logo.png" alt=""></div>
-      <h1 class="font-bold text-xl">Dev<span class="text-blue-600">Board</span></h1>
-    </div>
-    <div class="flex items-center gap-4">
-      <div class="flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
-        <input type="checkbox" checked class="checkbox checkbox-sm checkbox-primary" />
-        <span id="badge-count" class="font-semibold">23</span>
-      </div>
-      <div class="w-8 h-8"><button id="theme-btn" type="button"><img src="assets/theme-btn.png" alt=""> </button></div>
-    </div>
-  </div>
+       <!-- Header -->
+       <div class="bg-white rounded-xl p-4 flex justify-between items-center shadow-md">
+         <div class="flex items-center gap-2">
+             <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-lg"><img src="assets/logo.png" alt=""></div>
+                 <h1 class="font-bold text-xl">Dev<span class="text-blue-600">Board</span></h1>
+             </div>
+          <div id="nav-right-icon" class="flex items-center gap-4">
+              <div class="flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                   <input type="checkbox" checked class="checkbox checkbox-sm checkbox-primary" />
+                       <span id="badge-count" class="font-semibold">23</span>
+                 </div>
+            <div class="w-8 h-8"><button id="theme-btn" type="button"><img src="assets/theme-btn.png" alt=""> </button></div>
+         </div>
+               <div id="back-btn">
+                   <button id="back-button" class="btn btn-sm btn-outline btn-error"  type="button">Back</button>
+              </div>
+         </div>
 
-  <!-- Main content -->
-  <div class="grid grid-cols-4 gap-4 mt-6">
-    <!-- Left column -->
-    <div class="col-span-3">
-      <div class="flex gap-4 items-center">
-        <div class="bg-white rounded-xl p-4 w-1/4 flex flex-col items-center justify-center shadow">
-          <input type="checkbox" checked class="checkbox checkbox-lg checkbox-primary" />
-          <div class="text-center mt-2 font-medium">Task Assigned<br /><span id="task-assigned" class="text-xl font-bold">6</span></div>
-        </div>
-        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl p-4 flex-1 shadow">
-          <div class="flex items-center gap-3">
-            <div class="text-3xl"><img src="assets/board.png" alt=""></div>
-            <div>
-              <h2 class="text-lg font-bold">Discover Something New Today!</h2>
+          <!-- Main content -->
+          <div id="main-discover" class="grid grid-cols-4 gap-4 mt-6">
+          <!-- Left column -->
+              <div class="col-span-3">
+                   <div class="flex gap-4 items-center">
+                          <div class="bg-white rounded-xl p-4 w-1/4 flex flex-col items-center justify-center shadow">
+                                 <input type="checkbox" checked class="checkbox checkbox-lg checkbox-primary" />
+                                   <div class="text-center mt-2 font-medium">Task Assigned<br /><span id="task-assigned" class="text-xl font-bold">6</span></div>
+                          </div>
+                     <div id="Discover-something" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl p-4 flex-1 shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="text-3xl"><img src="assets/board.png" alt=""></div>
+                                           <div >
+               <h2 class="text-lg font-bold">Discover Something New Today!</h2>
             </div>
           </div>
         </div>
         <div class="bg-white flex h-28 items-center rounded-xl p-4 w-1/4 text-center shadow">
           <div class="text-xl "><img src="assets/calender.png" alt=""></div>
-          <h3 class="font-semibold ">Wed , <br /><span id="current-date"> <br>  Jul 25 2025</span></h3>
+          <h3 class="font-semibold ">Wed , <br /><span id="current-date"> Jul 25 2025</span></h3>
         </div>
       </div>
 
@@ -53,7 +56,7 @@
     </div>
 
     <!-- Right column -->
-    <div class="bg-white rounded-xl p-4 shadow-md">
+    <div  class="bg-white rounded-xl p-4 shadow-md">
       <div class="flex justify-between items-center mb-4">
         <h3 class="font-bold">Activity Log</h3>
         <button class="btn btn-sm btn-error text-white" onclick="document.getElementById('activity-log').innerHTML = ''">Clear History</button>
@@ -63,6 +66,29 @@
       </div>
     </div>
   </div>
+  <section id="Discover-form">
+    <form class="space-y-6 p-6 mt-24 max-w-2xl mx-auto bg-white shadow rounded">
+        <h1 class="text-xl font-bold">Question 1: What are the different ways to select an element in the DOM?</h1>
+        <textarea name="question1"  class="w-full p-2 border rounded" placeholder="Your answer..."></textarea>
+      
+        <h1 class="text-xl font-bold">Question 2: What is the difference between innerHTML, innerText, and textContent?</h1>
+        <textarea name="question2"  class="w-full p-2 border rounded" placeholder="Your answer..."></textarea>
+      
+        <h1 class="text-xl font-bold">Question 3: What is event delegation in the DOM?</h1>
+        <textarea name="question3"  class="w-full p-2 border rounded" placeholder="Your answer..."></textarea>
+      
+        <h1 class="text-xl font-bold">Question 4: What is event bubbling in the DOM?</h1>
+        <textarea name="question4"  class="w-full p-2 border rounded" placeholder="Your answer..."></textarea>
+      
+        <h1 class="text-xl font-bold">Question 5: How do you create, add, and remove elements using JavaScript?</h1>
+        <textarea name="question5"  class="w-full p-2 border rounded" placeholder="Your answer..."></textarea>
+      
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+      </form>
+    </section>
+   
         <script src="script/dev.js"></script>
+        <script src="script/toggle.js"></script>
+       
 </body>
 </html>

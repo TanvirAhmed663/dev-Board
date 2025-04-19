@@ -77,5 +77,14 @@ const now = new Date();
 const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
 dateElement.innerText = now.toLocaleDateString('en-US', options); 
 
+//Discover-something
+
+document.getElementById("Discover-something")
+.addEventListener("click",function(){
+
+    console.log("hello");
+
+})
+
 
 
